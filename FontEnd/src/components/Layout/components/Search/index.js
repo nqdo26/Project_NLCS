@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SearchIcon } from '~/components/Icons';
 import styles from './Search.module.scss';
 import classNames from 'classnames/bind';
-import SearchForm from './SearchForm'; 
+import SearchForm from './SearchMenu'; // Import the SearchForm component
 
 const cx = classNames.bind(styles);
 
@@ -22,15 +22,15 @@ function Search() {
             {showResult && (
                 <div className={cx('overlay')} onClick={handleBlur}>
                     <div className={cx('menu')} onClick={(e) => e.stopPropagation()}>
-                        <SearchForm /> 
+                        <SearchForm setShowResult={setShowResult} /> 
                     </div>
                 </div>
             )}
-            <div className={cx('search')}>
-                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()} onClick={handleFocus}>
+            <div className={cx('search')} onClick={handleFocus}>
+                <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()} >
                     <SearchIcon />
                 </button>
-                <p className={cx('search-input')} onClick={handleFocus} tabIndex="0">
+                <p className={cx('search-input')} tabIndex="0">
                     Search
                 </p>
             </div>

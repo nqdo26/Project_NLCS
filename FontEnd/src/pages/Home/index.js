@@ -1,5 +1,34 @@
 function Home() {
-    return <h1 style={{ height: 2000 }}>Home page</h1>;
+    return (
+        <h1>
+            <ul>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+                <li>hehe</li>
+            </ul>
+        </h1>
+    );
 }
 
 export default Home;

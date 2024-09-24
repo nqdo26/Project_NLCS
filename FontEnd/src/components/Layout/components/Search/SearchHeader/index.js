@@ -19,9 +19,7 @@ function SearchHeader({ setShowResult }) {
 
                 <SearchInHeader />
                 <div className={cx('actions')}>
-                    <>
-                        <Button onClick={() => setShowResult(false)} className={cx('btn-cancel')}>Cancel</Button>
-                    </>
+                    <Button onClick={() => setShowResult(false)} className={cx('btn-cancel')}>Cancel</Button>
                 </div>
             </div>
         </header>

@@ -1,11 +1,18 @@
+.overlay {
+    position: relative; 
+    left: 0;
+    width: 100vw; 
+    height: calc(100vh - 60px); 
+    z-index: 1000; 
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 .wrapper {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    max-height: min((100vh - 96px) - 60px, 734px);
-    min-height: 100px;
-    padding-top: 8px;
-    border-radius: 8px;
-    background: rgb(255, 255, 255);
-    box-shadow: rgb(0 0 0 /12%) 0px 2px 12px;
+    padding: 8px;
+    position: relative; 
+    left: 0;
+    width: 100vw; 
+    height: calc(40vh - 60px); 
+    z-index: 1000; 
+    background-color: white;
 }
