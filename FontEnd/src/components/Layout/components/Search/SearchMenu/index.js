@@ -1,7 +1,7 @@
 import React from 'react';
 import classNames from 'classnames/bind';
 import styles from './SearchForm.module.scss';
-import SearchHeader from '../SearchHeader'; // Import the SearchHeader component
+import SearchHeader from '../SearchHeader'; 
 
 const cx = classNames.bind(styles);
 
@@ -9,7 +9,7 @@ function SearchForm({ setShowResult }) {
     return (
         <div className={cx('inner')}>
             <div className={cx('header')}>
-                <SearchHeader setShowResult={setShowResult} /> {/* Pass setShowResult to SearchHeader */}
+                <SearchHeader setShowResult={setShowResult} /> 
             </div>
             <div className={cx('content')}>
                 <div className={cx('items')}>
