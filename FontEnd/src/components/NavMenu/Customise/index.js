@@ -5,15 +5,13 @@ import styles from './Customise.module.scss';
 
 const cx = classNames.bind(styles);
 
-function Customise({ isVisible }) {
+function Customise({ isVisible, onMouseLeave }) {
     return (
         <>
             {isVisible && (
-                <div className={cx('overlay')}>
+                <div className={cx('overlay')} onMouseLeave={onMouseLeave}>
                     <div className={cx('menu')}>
-                        <Link to="#">
-                            Customise
-                        </Link>
+                        hehe
                     </div>
                 </div>
             )}

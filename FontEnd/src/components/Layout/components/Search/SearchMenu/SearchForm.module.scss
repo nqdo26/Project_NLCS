@@ -1,12 +1,12 @@
 .inner {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align all children to the start horizontally */
+    align-items: flex-start; 
 }
 
 .header {
     width: 100%;
-    background-color: #f8f8f8; /* Example background color for the header */
+    background-color: #f8f8f8; 
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
@@ -14,14 +14,14 @@
 .content {
     width: 100%;
     display: flex;
-    flex-direction: column; /* Stack h3 elements vertically */
+    flex-direction: column; 
     padding: 16px;
-    background-color: #fff; /* Example background color for the content */
+    background-color: #fff; 
 }
 
 .items {
     margin-top: 30px;
-    padding-left: 430px; /* Adjust this value to match the left padding of the search bar */
+    padding-left: 430px; 
     font-size: 1.2rem;
     font-weight: bold;
 }

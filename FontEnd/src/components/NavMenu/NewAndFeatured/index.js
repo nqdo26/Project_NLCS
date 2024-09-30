@@ -5,15 +5,60 @@ import styles from './NewAndFeatured.module.scss';
 
 const cx = classNames.bind(styles);
 
-function NewAndFeatured({ isVisible }) {
+function NewAndFeatured({ isVisible, onMouseLeave }) {
     return (
         <>
             {isVisible && (
-                <div className={cx('overlay')}>
+                <div className={cx('overlay')} onMouseLeave={onMouseLeave}>
                     <div className={cx('menu')}>
-                        <Link to="#">
-                            New & Featured
-                        </Link>
+                        <div className={cx('items-wrapper')}>
+                            <div className={cx('items')}>
+                                <p className={cx('title')}>Popular Search Terms</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                                <p className={cx('content')}>Blazer</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                                <p className={cx('content')}>Blazer</p>
+                            </div>
+    
+                            <div className={cx('items')}>
+                                <p className={cx('title')}>Popular Search Terms</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                                <p className={cx('content')}>Blazer</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                            </div>
+    
+                            <div className={cx('items')}>
+                                <p className={cx('title')}>Popular Search Terms</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                                <p className={cx('content')}>Blazer</p>
+                            </div>
+    
+                            <div className={cx('items')}>
+                                <p className={cx('title')}>Popular Search Terms</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                                <p className={cx('content')}>Blazer</p>
+                            </div>
+    
+                            <div className={cx('items')}>
+                                <p className={cx('title')}>Popular Search Terms</p>
+                                <p className={cx('content')}>Air Force 1</p>
+                                <p className={cx('content')}>Jordan</p>
+                                <p className={cx('content')}>Air Max</p>
+                                <p className={cx('content')}>Blazer</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             )}

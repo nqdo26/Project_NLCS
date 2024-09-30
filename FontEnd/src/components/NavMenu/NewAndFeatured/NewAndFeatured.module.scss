@@ -1,19 +1,24 @@
 .overlay {
     position: fixed;
-    top: 60px;
+    top: calc(56.47px + 33.8px);
     left: 0;
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.3);
     z-index: 999;
+    pointer-events: none;
 }
 
 .menu {
-    height: 30vh;
+    display: flex;
+    height: 35vh;
     background-color: white;
     z-index: 1000;
     padding: 16px;
     position: relative;
+    pointer-events: all;
+    justify-content: center;
+
 }
 
 .nav-items {
@@ -24,7 +29,7 @@
 
 .nav-content {
     position: relative;
-    padding: 10px;
+    padding: 16px;
     text-decoration: none;
     color: black;
     font-size: 1.6rem;
@@ -35,7 +40,7 @@
         content: '';
         position: absolute;
         left: 0;
-        bottom: -2px; 
+        bottom: 0px; 
         width: 100%;
         height: 2px; 
         background-color: black;
@@ -48,4 +53,37 @@
     }
 }
 
+.items-wrapper {
+    padding-top: 40px;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
 
+}
+
+.items  {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        color: rgb(128, 127, 127);
+    }
+}
+
+.content {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgb(128, 127, 127);
+    cursor: pointer;
+
+    &:hover {
+        color: black;
+    }
+}
