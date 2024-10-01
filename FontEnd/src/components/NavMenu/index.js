@@ -5,6 +5,7 @@ import Products from './Products';
 import Sale from './Sale';
 import Customise from './Customise';
 import classNames from 'classnames/bind';
+import SNKRS from './SNKRS';
 
 const cx = classNames.bind(styles);
 
@@ -17,29 +18,20 @@ function NavMenu() {
 
     return (
         <div className={cx('nav-items')}>
-            <div
-                onMouseEnter={() => setHoveredItem('newAndFeatured')}
-                onMouseLeave={handleMouseLeave}
-            >
+            <div onMouseEnter={() => setHoveredItem('newAndFeatured')} onMouseLeave={handleMouseLeave}>
                 <NewAndFeatured isVisible={hoveredItem === 'newAndFeatured'} onMouseLeave={handleMouseLeave} />
             </div>
-            <div
-                onMouseEnter={() => setHoveredItem('products')}
-                onMouseLeave={handleMouseLeave}
-            >
+            <div onMouseEnter={() => setHoveredItem('products')} onMouseLeave={handleMouseLeave}>
                 <Products isVisible={hoveredItem === 'products'} onMouseLeave={handleMouseLeave} />
             </div>
-            <div
-                onMouseEnter={() => setHoveredItem('sale')}
-                onMouseLeave={handleMouseLeave}
-            >
+            <div onMouseEnter={() => setHoveredItem('sale')} onMouseLeave={handleMouseLeave}>
                 <Sale isVisible={hoveredItem === 'sale'} onMouseLeave={handleMouseLeave} />
             </div>
-            <div
-                onMouseEnter={() => setHoveredItem('customise')}
-                onMouseLeave={handleMouseLeave}
-            >
-                <Customise isVisible={hoveredItem === 'customise'} onMouseLeave={handleMouseLeave} />
+            <div>
+                <Customise/>
+            </div>
+            <div>
+                <SNKRS />
             </div>
         </div>
     );

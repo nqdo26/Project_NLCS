@@ -7,20 +7,11 @@ const cx = classNames.bind(styles);
 
 function Customise({ isVisible, onMouseLeave }) {
     return (
-        <>
-            {isVisible && (
-                <div className={cx('overlay')} onMouseLeave={onMouseLeave}>
-                    <div className={cx('menu')}>
-                        hehe
-                    </div>
-                </div>
-            )}
             <div className={cx('nav-items')}>
                 <Link className={cx('nav-content')} onMouseDown={(e) => e.preventDefault()}>
                     Customise
                 </Link>
             </div>
-        </>
     );
 }
 

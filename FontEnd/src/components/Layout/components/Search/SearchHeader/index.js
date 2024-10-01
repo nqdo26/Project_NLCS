@@ -14,7 +14,7 @@ function SearchHeader({ setShowResult }) {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <Link to="/" className={cx('logo-link')}>
-                    <img src={images.logo} alt="Tiktok" />
+                    <img src={images.logo} alt="Nike" />
                 </Link>
 
                 <SearchInHeader />

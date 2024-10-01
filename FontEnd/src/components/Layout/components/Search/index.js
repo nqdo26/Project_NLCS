@@ -19,13 +19,11 @@ function Search() {
 
     return (
         <>
-            {showResult && (
-                <div className={cx('overlay')} onClick={handleBlur}>
-                    <div className={cx('menu')} onClick={(e) => e.stopPropagation()}>
-                        <SearchForm setShowResult={setShowResult} /> 
-                    </div>
+            <div className={cx('overlay', { show: showResult })} onClick={handleBlur}>
+                <div className={cx('menu')} onClick={(e) => e.stopPropagation()}>
+                    <SearchForm setShowResult={setShowResult} /> 
                 </div>
-            )}
+            </div>
             <div className={cx('search')} onClick={handleFocus}>
                 <button className={cx('search-btn')} onMouseDown={(e) => e.preventDefault()} >
                     <SearchIcon />

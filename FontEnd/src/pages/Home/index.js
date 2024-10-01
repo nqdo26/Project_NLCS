@@ -11,21 +11,6 @@ function Home() {
                 <li>hehe</li>
                 <li>hehe</li>
                 <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
-                <li>hehe</li>
             </ul>
         </h1>
     );
