@@ -6,8 +6,9 @@ import { Link } from 'react-router-dom';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import { FarvoriteIcon, CartIcon } from '~/components/Icons';
-import Search from '../Search';
+import Search from '~/components/Search';
 import NavMenu from '~/components/NavMenu';
+import AccountOptions from '~/components/AccountOptions';
 
 const cx = classNames.bind(styles);
 
@@ -21,11 +22,21 @@ function Header() {
                             <Link to="/" className={cx('header-1-link')}>
                                 <span className={cx('header-1-content-1')}>Find a Store</span>
                             </Link>
+
                             <Link to="/" className={cx('header-1-link')}>
                                 <span className={cx('header-1-content')}>Help</span>
                             </Link>
-                            <Link to="/" className={cx('header-1-link')}>
+
+                            {/* No Login */}
+                            {/* <Link to="/" className={cx('header-1-link')}>
                                 <span className={cx('header-1-content')}>Log In</span>
+                                </Link> */}
+
+                            {/* Yes Login */}
+                            <Link to="login" className={cx('header-1-link')}>
+                                <span className={cx('header-1-content')}>
+                                    <AccountOptions />
+                                </span>
                             </Link>
                         </div>
                     </div>
@@ -35,7 +46,9 @@ function Header() {
                         <img src={images.logo} alt="Nike" />
                     </Link>
 
-                    <div className={cx('nav')}><NavMenu /></div>
+                    <div className={cx('nav')}>
+                        <NavMenu />
+                    </div>
 
                     <div className={cx('actions')}>
                         <>

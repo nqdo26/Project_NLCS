@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import styles from './SearchHeader.module.scss';
 import images from '~/assets/images';
-import Button from '../../../../Button';
+import Button from '~/components/Button';
 import SearchInHeader from './SearchInHeader';
 
 const cx = classNames.bind(styles);
@@ -19,7 +19,9 @@ function SearchHeader({ setShowResult }) {
 
                 <SearchInHeader />
                 <div className={cx('actions')}>
-                    <Button onClick={() => setShowResult(false)} className={cx('btn-cancel')}>Cancel</Button>
+                    <Button onClick={() => setShowResult(false)} className={cx('btn-cancel')}>
+                        Cancel
+                    </Button>
                 </div>
             </div>
         </header>

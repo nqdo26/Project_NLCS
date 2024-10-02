@@ -1,3 +1,15 @@
+// Hieu ung xuat hien
+@keyframes comeFromLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 .wrapper {
     --search-border-radius: 92px;
     --search-height: 46px;
@@ -25,8 +37,9 @@
 }
 
 .header-1 {
-    padding: 0 50px;
     display: flex;
+    height: 36px;
+    padding: 0 50px;
     justify-content: end;
     width: 100%;
     background-color: var(--header-color);
@@ -71,25 +84,27 @@
     height: 74px;
     width: 100%;
     background-color: var(--header-color);
-    
 }
 
 .header-3-inner {
     display: flex;
     flex-direction: column;
+    margin: 13px 485px;
     text-align: center;
-    margin-top: 13px;
+    animation: comeFromLeft 1s ease-out; 
 
     .header-3-content {
         font-size: 1.7rem;
+        cursor: default;
     }
 
     .header-3-link {
+        margin: 0px 113px;
         font-size: 1.2rem;
         font-weight: 700;
         text-decoration: underline;
+        
     }
-
 }
 
 .logo-link {
@@ -120,12 +135,10 @@
     margin-left: 5px;
     padding: 7px 7px;
     cursor: pointer;
-    border: 2px ;
+    border: 2px;
     border-radius: 50%;
 
     &:hover {
         background-color: var(--hover-color);
     }
 }
-
-

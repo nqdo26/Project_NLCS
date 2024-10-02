@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { SearchIcon } from '~/components/Icons';
 import styles from './Search.module.scss';
 import classNames from 'classnames/bind';
-import SearchForm from './SearchMenu'; // Import the SearchForm component
+import SearchForm from './SearchMenu'; 
 
 const cx = classNames.bind(styles);
 
