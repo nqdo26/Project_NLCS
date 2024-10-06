@@ -84,7 +84,7 @@ const LoginForm = () => (
                         Login
                       </Button>
   
-                      <Link><span className={cx('rerister-button')}>Register</span></Link>
+                      <Link to="/register"><span className={cx('rerister-button')}>Register</span></Link>
                     </div>
                 </Form.Item>
             </Form>

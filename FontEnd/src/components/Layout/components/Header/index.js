@@ -8,7 +8,8 @@ import images from '~/assets/images';
 import { FarvoriteIcon, CartIcon } from '~/components/Icons';
 import Search from '~/components/Search';
 import NavMenu from '~/components/NavMenu';
-import AccountOptions from '~/components/AccountOptions';
+// import AccountOptions from '~/components/AccountOptions';
+
 
 const cx = classNames.bind(styles);
 
@@ -28,16 +29,16 @@ function Header() {
                             </Link>
 
                             {/* No Login */}
-                            {/* <Link to="/" className={cx('header-1-link')}>
+                            <Link to="/login" className={cx('header-1-link')}>
                                 <span className={cx('header-1-content')}>Log In</span>
-                                </Link> */}
+                                </Link>
 
                             {/* Yes Login */}
-                            <Link to="login" className={cx('header-1-link')}>
+                            {/* <Link to="login" className={cx('header-1-link')}>
                                 <span className={cx('header-1-content')}>
                                     <AccountOptions />
                                 </span>
-                            </Link>
+                            </Link> */}
                         </div>
                     </div>
                 </div>
