@@ -1,8 +1,8 @@
 import React from 'react';
 import { Button, Checkbox, Form, Input } from 'antd';
-import Image from '~/components/Image';
 import classNames from 'classnames/bind';
 import styles from '~/components/LoginForm/LoginForm.module.scss';
+import Image from '~/components/Image';
 import loginLogo from '~/assets/images/loginLogo.png';
 import { Link } from 'react-router-dom';
 
@@ -37,7 +37,7 @@ const LoginForm = () => (
                 autoComplete="off"
             >
                 <Form.Item
-                    label="Email"
+                    label={<span className={cx('email')}>Email</span>}
                     name="email"
                     rules={[
                         {
@@ -50,7 +50,7 @@ const LoginForm = () => (
                 </Form.Item>
 
                 <Form.Item
-                    label="Password"
+                    label={<span className={cx('password')}>Password</span>}
                     name="password"
                     rules={[
                         {
@@ -80,11 +80,17 @@ const LoginForm = () => (
                     }}
                 >
                     <div className={cx('action')}>
-                      <Button className={cx('login-button')} type="primary" htmlType="submit">
-                        Login
-                      </Button>
-  
-                      <Link to="/register"><span className={cx('rerister-button')}>Register</span></Link>
+                        <Button className={cx('login-button')} type="primary" htmlType="submit">
+                            Login
+                        </Button>
+                    </div>
+                    <div className={cx('link')}>
+                        <Link to="/">
+                            <span className={cx('back')}>Back</span>
+                        </Link>
+                        <Link to="/register">
+                            <span className={cx('register')}>Register</span>
+                        </Link>
                     </div>
                 </Form.Item>
             </Form>
