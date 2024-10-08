@@ -12,7 +12,6 @@ import Products from '~/pages/Products';
 import Sale from '~/pages/Sale';
 import Customise from '~/pages/Customise';
 
-// Public routes
 const publicRoutes = [
     { path: routesConfig.register, component: Register, layout: LoginLayout },
     { path: routesConfig.login, component: Login, layout: LoginLayout },

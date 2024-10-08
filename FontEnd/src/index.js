@@ -3,12 +3,43 @@ import ReactDOM from 'react-dom/client';
 import App from '~/App';
 import reportWebVitals from './reportWebVitals';
 import GlobalStyles from './components/GlobalStyles';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from '~/pages/Home';
+import Login from '~/pages/Login';
+import Register from '~/pages/Register';
+import User from '~/pages/User';
+
+const router = createBrowserRouter([
+    {
+        path: '/',
+        element: <App />,
+        children: [
+            {
+                index: true,
+                element: <Home />,
+            },
+
+            {
+                path: 'user',
+                element: <User />,
+            },
+        ],
+    },
+    {
+        path: 'register',
+        element: <Register />,
+    },
+    {
+        path: 'login',
+        element: <Login />,
+    },
+]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <React.StrictMode>
         <GlobalStyles>
-            <App />
+            <RouterProvider router={router} />
         </GlobalStyles>
     </React.StrictMode>,
 );

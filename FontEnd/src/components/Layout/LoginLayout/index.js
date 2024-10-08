@@ -5,11 +5,9 @@ const cx = classNames.bind(styles);
 
 function LoginLayout({ children }) {
     return (
-        <div>
-            <div className={cx('wrapper')}>
-                <div className={cx('overlay')}>
-                    <div className={cx('content')}>{children}</div>
-                </div>
+        <div className={cx('wrapper')}>
+            <div className={cx('overlay')}>
+                <div className={cx('content')}>{children}</div>
             </div>
         </div>
     );
