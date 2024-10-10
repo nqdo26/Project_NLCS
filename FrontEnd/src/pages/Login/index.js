@@ -1,21 +1,41 @@
 import React from 'react';
-import { Button, Checkbox, Form, Input } from 'antd';
+import { Button, Checkbox, Form, Input, notification } from 'antd';
 import classNames from 'classnames/bind';
 import styles from '~/pages/Login/Login.module.scss';
 import Image from '~/components/Image';
 import loginLogo from '~/assets/images/loginLogo.png';
-import { Link } from 'react-router-dom';
-
+import { Link, useNavigate } from 'react-router-dom';
+import { loginApi } from '~/utils/api';
 const cx = classNames.bind(styles);
 
-const onFinish = (values) => {
-    console.log('Success:', values);
-};
-const onFinishFailed = (errorInfo) => {
-    console.log('Failed:', errorInfo);
-};
 
 function Login() {
+    const navigate = useNavigate();
+    const onFinish = async (values) => {
+        const {email, password } = values;
+
+        const res = await loginApi(email, password);
+
+        if (res && res.EC === 0) {
+            localStorage.setItem("access_token", res.access_token);
+            notification.success({
+                message: 'LOGIN USER',
+                description: 'Success',
+            });
+            navigate('/');
+        } else {
+            notification.error({
+                message: 'LOGIN USER',
+                description: res?.EM?? 'Email or password is incorrect',
+            });
+        }
+
+        console.log('Received values of form: ', res);
+    };
+
+    const onFinishFailed = (errorInfo) => {
+        console.log('Failed:', errorInfo);
+    };
     return (
         <div className={cx('wrapper')}>
             <div className={cx('overlay')}>
@@ -45,7 +65,7 @@ function Login() {
                             rules={[
                                 {
                                     required: true,
-                                    message: 'Please input your username!',
+                                    message: 'Please input your email!',
                                 },
                             ]}
                         >
@@ -90,8 +110,7 @@ function Login() {
                                 <Link to="/register">
                                     <span className={cx('register')}>Register</span>
                                 </Link>
-                            </div>
-                            <div className={cx('back-button')}>
+
                                 <Link to="/">
                                     <span className={cx('back')}>Back to HomePage</span>
                                 </Link>

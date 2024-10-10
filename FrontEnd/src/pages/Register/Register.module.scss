@@ -21,15 +21,16 @@
 .inner {
     display: flex;
     flex-direction: column;
-    padding: 60px;
+    padding: 50px;
+    padding-bottom: 5px;
     width: 421px;
     align-items: center;
     justify-content: center;
     background-color: #f9f9f9;
-    gap: 50px;
+    gap: 45px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
-    z-index: 2; /* Ensure it is above the overlay */
+    z-index: 2;
 }
 
 .img {
@@ -37,22 +38,31 @@
     height: auto;
 }
 
-.email {
-    padding-right: 35px;
+.lable-name {
+    padding-right: 25px;
 }
 
-.password {
-    padding-right: 10px;
+.lable-email {
+    padding-right: 30px;
+}
+
+.lable-pw {
+    padding-right: 5px;
 }
 
 .action {
-    display: inline-flex;
-    gap: 10px;
+    margin-top: 20px;
+    width: 100%;
+    align-self: flex-start;
+    display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 10px;
 }
 
-.login-button {
+.register-button {
     background-color: var(--white);
     color: rgb(0, 0, 0);
     padding: 10px 20px;
@@ -66,8 +76,7 @@
     }
 }
 
-.register {
-    margin-left: 13px;
+.login {
     color: rgb(0, 0, 168);
 
     &:hover {
@@ -75,17 +84,3 @@
     }
 }
 
-.back-button {
-    width: 100%;
-    margin-bottom: -100px;
-    margin-right: -00px;
-}
-
-.back {
-    font-size: 1.2rem;
-    color: rgb(0, 0, 0);
-
-    &:hover {
-        color: red;
-    }
-}
